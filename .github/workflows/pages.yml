@@ -22,12 +22,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm ci
+      - run: npm ci || npm install     # <-- accept either case
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: build   # your Vite outDir is 'build'
-
+          path: build                  # Vite outDir in your project
   deploy:
     needs: build
     runs-on: ubuntu-latest
