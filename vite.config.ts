@@ -4,6 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   base: '/portfolio/',           // 👈 add this line
+  build: { outDir: 'build' },
   plugins: [react()],
   resolve: {
     dedupe: ['react', 'react-dom'],
