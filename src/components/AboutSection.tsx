@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="mb-4 text-3xl md:text-4xl font-bold">About Me</h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-            I'm a PhD candidate at the University of Michigan-Dearborn, passionate about advancing systems security 
+            I'm a PhD candidate at the University of Michigan, passionate about advancing systems security 
             through innovative research at the intersection of graph-based modeling, adversarial machine learning, 
             and privacy-preserving explainability.
           </p>

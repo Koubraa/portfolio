@@ -3,8 +3,7 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Mail, Phone, Linkedin, ExternalLink } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import headshot from '@/assets/headshot.jpeg'; // 👈 add your image here
-
+import headshot from '@/assets/headshot.jpeg'; 
 const HeroSection: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -19,9 +18,9 @@ const HeroSection: React.FC = () => {
         <div className="mb-8">
           <div className="mb-6">
             <ImageWithFallback
-              src={headshot}   // 👈 now using repo image
+              src={headshot}   
               alt="Firas Ben Hmida - Professional Photo"
-              className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 object-cover border-4 border-primary/10 shadow-lg"
+              className="w-64 h-64 md:w-40 md:h-40 rounded-full mx-auto mb-6 object-cover border-4 border-primary/10 shadow-lg"
             />
           </div>
           <Badge variant="secondary" className="mb-4">
