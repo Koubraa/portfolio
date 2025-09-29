@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Mail, Phone, Linkedin, ExternalLink } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import headshot from '@/assets/headshot.jpg'; // 👈 add your image here
+import headshot from '@/assets/headshot.jpeg'; // 👈 add your image here
 
 const HeroSection: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
