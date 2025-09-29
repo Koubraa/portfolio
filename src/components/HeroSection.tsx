@@ -3,6 +3,7 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Mail, Phone, Linkedin, ExternalLink } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import headshot from '@/assets/headshot.jpg'; // 👈 add your image here
 
 const HeroSection: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -18,7 +19,7 @@ const HeroSection: React.FC = () => {
         <div className="mb-8">
           <div className="mb-6">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1576558656222-ba66febe3dec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDF8fHx8MTc1OTA4Njk3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src={headshot}   // 👈 now using repo image
               alt="Firas Ben Hmida - Professional Photo"
               className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 object-cover border-4 border-primary/10 shadow-lg"
             />
@@ -27,11 +28,11 @@ const HeroSection: React.FC = () => {
             PhD Candidate in Systems Security
           </Badge>
         </div>
-        
+
         <h1 className="mb-6 text-4xl md:text-6xl font-bold tracking-tight">
           Firas Ben Hmida
         </h1>
-        
+
         <p className="mb-8 text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           Passionate about advancing systems security through graph-based modeling, adversarial machine learning, 
           and privacy-preserving explainability. Building scalable, trustworthy AI systems at the intersection of 
