@@ -38,7 +38,7 @@ const SkillsSection: React.FC = () => {
     },
     {
       metric: "73",
-      description: "Previously unknown zero-day exploits discovered"
+      description: "Previously unknown zero-day exploits discovered under submission"
     },
     {
       metric: "95%",

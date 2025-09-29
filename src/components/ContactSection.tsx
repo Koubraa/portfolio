@@ -21,7 +21,7 @@ const ContactSection: React.FC = () => {
       icon: <Linkedin className="w-5 h-5" />,
       label: "LinkedIn",
       value: "Firas Ben Hmida",
-      href: "https://linkedin.com/in/firas-ben-hmida"
+      href: "https://www.linkedin.com/in/firas-ben-hmida-213185201/"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
@@ -33,10 +33,8 @@ const ContactSection: React.FC = () => {
 
   const interests = [
     "Research Collaborations",
-    "PhD Opportunities",
-    "Industry Partnerships",
+    "Industry Internships",
     "Security Consulting",
-    "Speaking Engagements",
     "Open Source Projects"
   ];
 
@@ -46,7 +44,7 @@ const ContactSection: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="mb-4 text-3xl md:text-4xl font-bold">Get In Touch</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Interested in collaboration, research opportunities, or discussing cybersecurity challenges? 
+            Interested in collaboration or discussing cybersecurity challenges? 
             I'd love to hear from you.
           </p>
         </div>
@@ -127,7 +125,7 @@ const ContactSection: React.FC = () => {
             <Button 
               size="lg" 
               variant="outline"
-              onClick={() => window.open('https://linkedin.com/in/firas-ben-hmida', '_blank')}
+              onClick={() => window.open('https://www.linkedin.com/in/firas-ben-hmida-213185201/', '_blank')}
               className="min-w-[140px]"
             >
               <Linkedin className="w-4 h-4 mr-2" />

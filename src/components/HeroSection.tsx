@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
           </div>
           <div className="flex items-center gap-2 text-muted-foreground">
             <Linkedin className="w-4 h-4" />
-            <span>Firas Ben Hmida</span>
+            <span>https://www.linkedin.com/in/firas-ben-hmida-213185201/</span>
           </div>
         </div>
         

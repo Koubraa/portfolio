@@ -63,7 +63,7 @@ export default function App() {
 
       <footer className="bg-card border-t py-8 px-6 text-center">
         <p className="text-muted-foreground">
-          © 2024 Firas Ben Hmida. PhD Candidate in Systems
+          © 2025 Firas Ben Hmida. PhD Candidate in Systems
           Security at University of Michigan.
         </p>
       </footer>
