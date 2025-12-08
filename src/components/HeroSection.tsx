@@ -40,8 +40,7 @@ const HeroSection: React.FC = () => {
 
         <p className="mb-8 text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           Passionate about advancing systems security through graph-based modeling, adversarial machine learning, 
-          and privacy-preserving explainability. Building scalable, trustworthy AI systems at the intersection of 
-          Product Security Engineering and applied machine learning defenses.
+          and privacy-preserving explainability. Building scalable, trustworthy AI systems with applied machine learning defenses.
         </p>
 
         {/* Contact row with clickable links */}
