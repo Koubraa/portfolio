@@ -29,6 +29,14 @@ type Publication = {
   overviewFigureUrl?: string;
   overviewFigureAlt?: string;
 };
+const cves2025 = [
+  'CVE-2025-65336',
+  'CVE-2025-65337',
+  'CVE-2025-65340',
+  'CVE-2025-65341',
+  'CVE-2025-65342',
+  'CVE-2025-65343'
+];
 
 const PublicationsSection: React.FC = () => {
   const publications: Publication[] = [
@@ -39,7 +47,7 @@ const PublicationsSection: React.FC = () => {
       authors: 'Firas Ben Hmida, Abderrahmen Amich, Ata Kaboudi, Birhanu Eshete',
       venue: 'IEEE ACSAC 2025',
       type: 'Conference Paper',
-      codeUrl: 'https://github.com/Koubraa/DeepProv',
+      codeUrl: 'https://github.com/um-dsp/DeepProv',
 
       // ✅ Replace with the real DeepProv arXiv link when ready
       arxivUrl: 'https://arxiv.org/pdf/2509.26562',
@@ -214,7 +222,19 @@ const PublicationsSection: React.FC = () => {
             <li>• Privacy-preserving techniques for explainable AI</li>
             <li>• Automated vulnerability detection and remediation systems</li>
           </ul>
+        
+          <div className="mt-5">
+            <h4 className="font-semibold mb-2">Vulnerability Discoveries (2025)</h4>
+            <div className="flex flex-wrap gap-2">
+              {cves2025.map((id) => (
+                <Badge key={id} variant="outline">
+                  {id}
+                </Badge>
+              ))}
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
   );
