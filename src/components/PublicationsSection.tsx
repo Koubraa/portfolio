@@ -2,6 +2,13 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { FileText, ExternalLink, Users, Calendar, Github } from 'lucide-react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+
+// ✅ Put these files here:
+// src/assets/publications/deepprov-overview.png
+// src/assets/publications/spgnn-overview.png
+import deepProvOverview from '@/assets/deepprov.png';
+import spgnnOverview from '@/assets/spgnnapi.png';
 
 type Publication = {
   title: string;
@@ -11,11 +18,16 @@ type Publication = {
   year?: string | number;
   type?: string;
   equalContribution?: boolean;
+
   // Optional links
   codeUrl?: string;
   arxivUrl?: string;
   pdfUrl?: string;
   projectUrl?: string;
+
+  // ✅ NEW: Approach overview figure
+  overviewFigureUrl?: string;
+  overviewFigureAlt?: string;
 };
 
 const PublicationsSection: React.FC = () => {
@@ -27,8 +39,13 @@ const PublicationsSection: React.FC = () => {
       authors: 'Firas Ben Hmida, Abderrahmen Amich, Ata Kaboudi, Birhanu Eshete',
       venue: 'IEEE ACSAC 2025',
       type: 'Conference Paper',
-      // ✅ Code link (replace if your repo URL differs)
-      codeUrl: 'https://github.com/Koubraa/DeepProv'
+      codeUrl: 'https://github.com/Koubraa/DeepProv',
+
+      // ✅ Replace with the real DeepProv arXiv link when ready
+      arxivUrl: 'https://arxiv.org/pdf/2509.26562',
+
+      overviewFigureUrl: deepProvOverview,
+      overviewFigureAlt: 'DeepProv approach overview'
     },
     {
       title:
@@ -40,8 +57,10 @@ const PublicationsSection: React.FC = () => {
       year: '2024',
       type: 'Journal Article',
       equalContribution: true,
-      // ✅ arXiv link (put the real one here)
-      arxivUrl: 'https://arxiv.org/abs/2305.19487'
+      arxivUrl: 'https://arxiv.org/abs/2305.19487',
+
+      overviewFigureUrl: spgnnOverview,
+      overviewFigureAlt: 'SPGNN-API approach overview'
     }
   ];
 
@@ -89,7 +108,7 @@ const PublicationsSection: React.FC = () => {
               </CardHeader>
 
               <CardContent>
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <div className="flex items-start gap-2">
                     <Users className="w-4 h-4 mt-0.5 text-muted-foreground flex-shrink-0" />
                     <p className="text-sm text-muted-foreground leading-relaxed">
@@ -108,8 +127,25 @@ const PublicationsSection: React.FC = () => {
                     </div>
                   )}
 
+                  {/* ✅ NEW: Approach overview figure */}
+                  {pub.overviewFigureUrl && (
+                    <div className="pt-2">
+                      <div className="rounded-lg border bg-card p-3">
+                        <p className="text-sm font-medium mb-2">Approach Overview</p>
+                        <ImageWithFallback
+                          src={pub.overviewFigureUrl}
+                          alt={pub.overviewFigureAlt || `${pub.title} overview`}
+                          className="w-full h-auto rounded-md"
+                        />
+                        <p className="mt-2 text-xs text-muted-foreground">
+                          Overview of the {pub.title} pipeline.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
                   {(pub.codeUrl || pub.arxivUrl || pub.pdfUrl || pub.projectUrl) && (
-                    <div className="pt-2 flex flex-wrap gap-3">
+                    <div className="pt-1 flex flex-wrap gap-3">
                       {pub.codeUrl && (
                         <a
                           href={pub.codeUrl}
@@ -185,4 +221,3 @@ const PublicationsSection: React.FC = () => {
 };
 
 export default PublicationsSection;
-
