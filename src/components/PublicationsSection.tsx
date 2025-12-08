@@ -4,9 +4,9 @@ import { Badge } from './ui/badge';
 import { FileText, ExternalLink, Users, Calendar, Github } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-// ✅ Put these files here:
-// src/assets/publications/deepprov-overview.png
-// src/assets/publications/spgnn-overview.png
+// ✅ Make sure these exist in: src/assets/
+// - deepprov.png
+// - spgnnapi.png
 import deepProvOverview from '@/assets/deepprov.png';
 import spgnnOverview from '@/assets/spgnnapi.png';
 
@@ -25,10 +25,11 @@ type Publication = {
   pdfUrl?: string;
   projectUrl?: string;
 
-  // ✅ NEW: Approach overview figure
+  // ✅ Approach overview figure
   overviewFigureUrl?: string;
   overviewFigureAlt?: string;
 };
+
 const cves2025 = [
   'CVE-2025-65336',
   'CVE-2025-65337',
@@ -49,8 +50,8 @@ const PublicationsSection: React.FC = () => {
       type: 'Conference Paper',
       codeUrl: 'https://github.com/um-dsp/DeepProv',
 
-      // ✅ Replace with the real DeepProv arXiv link when ready
-      arxivUrl: 'https://arxiv.org/pdf/2509.26562',
+      // ✅ Safer arXiv link format
+      arxivUrl: 'https://arxiv.org/abs/2509.26562',
 
       overviewFigureUrl: deepProvOverview,
       overviewFigureAlt: 'DeepProv approach overview'
@@ -135,7 +136,6 @@ const PublicationsSection: React.FC = () => {
                     </div>
                   )}
 
-                  {/* ✅ NEW: Approach overview figure */}
                   {pub.overviewFigureUrl && (
                     <div className="pt-2">
                       <div className="rounded-lg border bg-card p-3">
@@ -222,7 +222,7 @@ const PublicationsSection: React.FC = () => {
             <li>• Privacy-preserving techniques for explainable AI</li>
             <li>• Automated vulnerability detection and remediation systems</li>
           </ul>
-        
+
           <div className="mt-5">
             <h4 className="font-semibold mb-2">Vulnerability Discoveries (2025)</h4>
             <div className="flex flex-wrap gap-2">
@@ -234,7 +234,6 @@ const PublicationsSection: React.FC = () => {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
