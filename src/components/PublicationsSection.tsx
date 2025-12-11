@@ -7,8 +7,10 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 // ✅ Make sure these exist in: src/assets/
 // - deepprov.png
 // - spgnnapi.png
+// - LeakyFarm-Figure-1.png
 import deepProvOverview from '@/assets/deepprov.png';
 import spgnnOverview from '@/assets/spgnnapi.png';
+import deepLeakOverview from '@/assets/LeakyFarm-Figure-1.png';
 
 type Publication = {
   title: string;
@@ -41,6 +43,19 @@ const cves2025 = [
 
 const PublicationsSection: React.FC = () => {
   const publications: Publication[] = [
+    
+    {
+      title:
+        'DeepLeak: Privacy Enhancing Hardening of Model Explanations Against Membership Leakage',
+      status: 'Accepted at IEEE SatML 2026',
+      authors: 'Firas Ben Hmida, Zain Sbeih, Philemon Hailemariam, Birhanu Eshete',
+      venue: 'IEEE SatML 2026',
+      year: '2026',
+      type: 'Conference Paper',
+      codeUrl: 'https://anonymous.4open.science/r/DeepLeak-DDD9/README.md',
+      overviewFigureUrl: deepLeakOverview,
+      overviewFigureAlt: 'DeepLeak approach overview'
+    },
     {
       title:
         'DeepProv: Behavioral Characterization and Repair of Neural Networks via Inference Provenance Graph Analysis',
@@ -49,10 +64,8 @@ const PublicationsSection: React.FC = () => {
       venue: 'IEEE ACSAC 2025',
       type: 'Conference Paper',
       codeUrl: 'https://github.com/um-dsp/DeepProv',
-
       // ✅ Safer arXiv link format
       arxivUrl: 'https://arxiv.org/abs/2509.26562',
-
       overviewFigureUrl: deepProvOverview,
       overviewFigureAlt: 'DeepProv approach overview'
     },
@@ -67,7 +80,6 @@ const PublicationsSection: React.FC = () => {
       type: 'Journal Article',
       equalContribution: true,
       arxivUrl: 'https://arxiv.org/abs/2305.19487',
-
       overviewFigureUrl: spgnnOverview,
       overviewFigureAlt: 'SPGNN-API approach overview'
     }
