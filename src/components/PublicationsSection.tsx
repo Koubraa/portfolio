@@ -52,7 +52,8 @@ const PublicationsSection: React.FC = () => {
       venue: 'IEEE SatML 2026',
       year: '2026',
       type: 'Conference Paper',
-      codeUrl: 'https://anonymous.4open.science/r/DeepLeak-DDD9/README.md',
+      codeUrl: 'https://github.com/um-dsp/DeepLeak',
+      arxivUrl: 'https://arxiv.org/abs/2601.03429',
       overviewFigureUrl: deepLeakOverview,
       overviewFigureAlt: 'DeepLeak approach overview'
     },
